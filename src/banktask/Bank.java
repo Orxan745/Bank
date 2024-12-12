@@ -1,4 +1,4 @@
-package OOP.banktask;
+package banktask;
 
 public class Bank {
 
