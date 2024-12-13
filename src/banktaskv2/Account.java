@@ -1,7 +1,6 @@
 package banktaskv2;
 
 public class Account {
-
     private String accountNumber;
 
     private Double deposit = 0D;
@@ -20,5 +19,10 @@ public class Account {
 
     public void setDeposit(Double deposit) {
         this.deposit = deposit;
+    }
+
+    @Override
+    public String toString() {
+        return "Deposit: "+this.deposit;
     }
 }

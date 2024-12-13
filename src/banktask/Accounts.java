@@ -15,8 +15,7 @@ public class Accounts {
            }
            customers = customers1;
        }
-       customers[customerCount] = customer;
-       customerCount++;
+       customers[customerCount++] = customer;
        String a = Customer.randomIdentityCode();
        customer.setIdentificationNumber(a);
         System.out.println("---------------------------------------");

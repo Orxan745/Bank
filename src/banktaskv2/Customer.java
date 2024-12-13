@@ -1,8 +1,9 @@
 package banktaskv2;
 
 public class Customer {
-
     private String name;
+
+    private String surname;
 
     private String identificationNo;
 
@@ -10,9 +11,9 @@ public class Customer {
 
     private int accountsCount = 0;
 
-    public Customer(String name, String identificationNo) {
+    public Customer(String name, String surname) {
         this.name = name;
-        this.identificationNo = identificationNo;
+        this.surname = surname;
     }
 
     public String getName() {
@@ -21,6 +22,14 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getIdentificationNo() {
@@ -45,5 +54,12 @@ public class Customer {
 
     public void setAccountsCount(int accountsCount) {
         this.accountsCount = accountsCount;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: "+this.name+"\n" +
+                "Surname: "+this.surname+"\n" +
+                "Accounts: "+this.accountsCount;
     }
 }

@@ -51,15 +51,14 @@ public class Customer {
 
     public static String randomIdentityCode() {
         Random random = new Random();
-        int a = 7;
-        int b;
-        char c;
-        String result = "";
-        for (int i = 0; i < a; i++){
-            b = random.nextInt(48,57);
-            c = (char) b;
-            result = result + c;
+        int a;
+        char b;
+        String identificationCode = "";
+        for (int i = 0; i < 7; i++){
+            a = random.nextInt(48,57);
+            b = (char) a;
+            identificationCode = identificationCode + b;
         }
-        return result;
+        return identificationCode;
     }
 }
