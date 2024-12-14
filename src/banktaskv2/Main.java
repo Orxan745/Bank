@@ -11,14 +11,18 @@ public class Main {
             printMenu();
             System.out.print("Please select an option: ");
             int option = scanner.nextInt();
-            switch (option) {
-                case 1 -> addCustomer();
-                case 2 -> createAccount();
-                case 3 -> increaseDeposit();
-                case 4 -> transferMoney();
-                case 5 -> seeTotalDeposit();
-                case 6 -> searchCustomersAndAccounts();
-                case 7 -> System.exit(0);
+            try {
+                switch (option) {
+                    case 1 -> addCustomer();
+                    case 2 -> createAccount();
+                    case 3 -> increaseDeposit();
+                    case 4 -> transferMoney();
+                    case 5 -> seeTotalDeposit();
+                    case 6 -> searchCustomersAndAccounts();
+                    case 7 -> System.exit(0);
+                }
+            }catch (RuntimeException e) {
+                System.out.println("Please try again!");
             }
         }
     }
